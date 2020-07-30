@@ -11,11 +11,8 @@
     - [Windows Font Install](#windows-font-install)
   - [More configuration sync](#more-configuration-sync)
     - [VS Code](#vs-code)
-  - [Troubleshooting](#troubleshooting)
-    - [PIP Errors](#pip-errors)
   - [Credits](#credits)
     - [Dotfiles](#dotfiles)
-    - [Ansible Roles](#ansible-roles)
     - [Misc](#misc)
     - [Resources](#resources)
 
@@ -110,23 +107,6 @@ repos/setup.sh
 ### Dotfiles
 
 - [dotbot](https://github.com/anishathalye/dotbot) - A tool that bootstraps your dotfiles ⚡️
-
-### Ansible Roles
-
-| Role | Purpose |
-| --- | --- |
-| [ansible-role-docker](https://github.com/geerlingguy/ansible-role-docker) | Install Docker and Docker-compose |
-| [ansible-role-dotnet-core](https://github.com/ocha/ansible-role-dotnet-core) | Install .NET Core |
-| [ansible-fish](https://github.com/telus/ansible-fish) ([with modifications](https://github.com/cumpsd/ansible-role-fish)) | Install Fish and configure default shell |
-| [ansible-fzf](https://github.com/dotstrap/ansible-fzf) | Install & configure fzf |
-| [ansible-role-git](https://github.com/geerlingguy/ansible-role-git) | Install Git from source |
-| [ansible-role-hub](https://github.com/wtanaka/ansible-role-hub) | Install Hub |
-| [ansible-role-mono](https://github.com/cumpsd/ansible-role-mono) | Install Mono |
-| [ansible-role-nodejs](https://github.com/geerlingguy/ansible-role-nodejs) | Install Node.js and NPM |
-| [ansible-role-ntp](https://github.com/geerlingguy/ansible-role-ntp) | Setup NTP and configure timezone |
-| [ansible-role-packer](https://github.com/geerlingguy/ansible-role-packer) | Install Packer |
-| [ansible-role-pip](https://github.com/geerlingguy/ansible-role-pip) | Install Pip |
-| [ansible-role-visual-studio-code](https://github.com/gantsign/ansible-role-visual-studio-code) | Install VS Code |
 
 ### Misc
 
