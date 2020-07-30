@@ -1,0 +1,15 @@
+[submodule "dotbot"]
+	path = dotbot
+	url = https://github.com/CumpsD/dotbot
+[submodule "vpn/cryptostorm-config"]
+	path = vpn/cryptostorm-config
+	url = https://github.com/cryptostorm/cryptostorm_client_configuration_files
+[submodule "fonts/nerd-fonts"]
+	path = fonts/nerd-fonts
+	url = https://github.com/CumpsD/dotfiles-nerd-fonts.git
+[submodule "fish/oh-my-fish"]
+	path = fish/oh-my-fish
+	url = https://github.com/CumpsD/dotfiles-oh-my-fish.git
+[submodule "fonts/san-francisco"]
+	path = fonts/san-francisco
+	url = https://github.com/CumpsD/dotfiles-san-francisco-fonts

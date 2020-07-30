@@ -1,0 +1,73 @@
+---
+- name: Setup new machine
+  hosts: local
+  become: yes
+
+  vars:
+    gui: false
+
+  tasks:
+  - name: Setup basic system
+    include_role:
+      name: system
+    vars:
+      include_gui: "{{ gui }}"
+
+  # - name: Install Pip
+  #   include_role:
+  #     name: pip
+  #   vars:
+  #     pip_install_packages:
+  #     - pip
+  #     - awscli
+  #     - thefuck
+  #     - boto
+  #     - virtualfish
+
+  # - name: Install Go
+  #   include_role:
+  #     name: golang
+  #   vars:
+  #     go_tarball: 'go1.12.7.linux-amd64.tar.gz'
+  #     go_tarball_checksum: 'sha256:66d83bfb5a9ede000e33c6579a91a29e6b101829ad41fffb5c5bb6c900e109d9'
+  #     go_version_target: 'go version go1.12.7 linux/amd64'
+
+  #     go_packages:
+  #     - 'github.com/cumpsd/ccat'
+
+  # - name: Install Fish and configure default shell
+  #   include_role:
+  #     name: fish
+  #   vars:
+  #     fish_users: ['root', 'cumpsd']
+
+  # - name: Install FZF
+  #   include_role:
+  #     name: fzf
+  #   vars:
+  #     fzf_version: '0.18.0'
+
+  #     docker_compose_version: '1.24.1'
+  #     docker_compose_path: /usr/local/bin/docker-compose
+
+  # - name: Setup NTP and configure timezone
+  #   include_role:
+  #     name: ntp
+  #   vars:
+  #     ntp_enabled: true
+  #     ntp_timezone: Europe/Brussels
+
+  # - name: Install Terraform
+  #   include_role:
+  #     name: terraform
+  #   vars:
+  #     terraform_ver : '0.12.6'
+  #     terraform_platform : linux_amd64
+  #     terraform_install_dir : /usr/local/bin
+  #     terraform_checksums:
+  #       '0.12.6':
+  #         linux_amd64: sha256:6544eb55b3e916affeea0a46fe785329c36de1ba1bdb51ca5239d3567101876f
+
+  # - name: Install Mono
+  #   include_role:
+  #     name: mono

@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+set -e
+
+if [ "$1" = "base" ]; then
+    CONFIG="install-base.conf.yaml"
+elif [ "$1" = "dotnet" ]; then
+    CONFIG="install-dotnet.conf.yaml"
+elif [ "$1" = "wsl" ]; then
+    CONFIG="install-wsl.conf.yaml"
+elif [ "$1" = "sudo" ]; then
+    CONFIG="install-sudo.conf.yaml"
+else
+     echo "Missing argument"
+     exit 1
+fi
+
+DOTBOT_DIR="dotbot"
+DOTBOT_BIN="bin/dotbot"
+BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+cd "${BASEDIR}"
+git -C "${DOTBOT_DIR}" submodule sync --quiet --recursive
+git submodule update --init --recursive "${DOTBOT_DIR}"
+
+"${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${CONFIG}"

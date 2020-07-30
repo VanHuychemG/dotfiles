@@ -1,0 +1,109 @@
+[push]
+    default = simple
+	
+[vlaamseoverheid]
+    email = david.cumps@vlaanderen.be
+    name = David Cumps
+
+[gogs]
+    email = david@exira.com
+    name = David Cumps
+
+[github]
+    email = david@cumps.be
+    name = David Cumps
+
+[gpg]
+    program = /usr/bin/gpg
+
+[init]
+    templateDir = ~/.git-templates
+    defaultBranch = main
+
+[user]
+    useConfigOnly = true
+    signingKey = 9D771C7A03413FB3
+
+[commit]
+    gpgSign = true
+
+[tag]
+    forceSignAnnotated = true
+
+[credential]
+    canFallBackToInsecureStore = false
+
+[core]
+    compression = 9
+
+[url "git@github.com:"]
+    insteadOf = gh:
+
+[url "git@gist.github.com:"]
+    insteadOf = gist:
+
+[url "git@bitbucket.org:"]
+    insteadOf = bb:
+
+[color]
+    ui = true
+
+[color "branch"]
+    current = yellow reverse
+    local = yellow
+    remote = green
+
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+
+[color "status"]
+    added = yellow
+    changed = green
+    untracked = red
+
+[alias]
+    # Show all configured aliases
+    aliases = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\ \t => \\2/' | sort
+
+    # For when you made that commit a bit too early, amend
+    amend = !git log -n 1 --pretty=tformat:%s%n%n%b | git commit -F - --amend
+
+    # Show all branches
+    branches = branch -avv
+
+    # List all tags
+    tags = tag -l
+
+    # Which files are receiving the most "love"
+    churn = !git log --all -M -C --name-only --format='format:' "$@" | sort | grep -v '^$' | uniq -c | sort | awk 'BEGIN {print "count,file"} {print $1 "," $2}'
+
+    # View the log and diff for a commit (previous if no SHA1 provided)
+    details = log -n1 -p --format=fuller
+
+    # Save a repo as a tarball
+    export = archive -o latest.tar.gz -9 --prefix=latest/
+
+    # View a pretty git log with branch tree
+    g = !git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+
+    # Save some time typing
+    st = !git status -sb
+
+    # Return a list of commit SHA1s
+    l = "!f() { git log $* | grep '^commit ' | cut -f 2 -d ' '; }; f"
+
+    # Thin out older metadata within the repository, reduceses filesystem footprint
+    trim = !git reflog expire --expire=now --all && git gc --prune=now
+
+    log-graph = !"git log-graph --all"
+
+    log-graph = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(auto)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)'
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true

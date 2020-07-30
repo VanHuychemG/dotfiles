@@ -1,0 +1,8 @@
+---
+- name: Install System
+  include_tasks: setup-Debian.yml
+
+- name: Install UI
+  include_tasks: setup-Debian-UI.yml
+  when:
+    - include_gui|bool

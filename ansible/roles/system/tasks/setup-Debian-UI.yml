@@ -1,0 +1,50 @@
+---
+- name: Install VS Code
+  apt:
+    name: ['code']
+    state: latest
+
+- name: Install Rambox
+  apt:
+    name: ['rambox']
+    state: latest
+
+- name: Install Spotify
+  apt:
+    name: ['spotify-client']
+    state: latest
+
+- name: Install Chrome
+  apt:
+    name: ['google-chrome-stable']
+    state: latest
+
+- name: Install Remmina
+  apt:
+    name: ['remmina']
+    state: latest
+
+- name: Install VLC
+  apt:
+    name: ['vlc']
+    state: latest
+
+- name: Install system tools
+  apt:
+    name: [
+      'dconf-editor',
+      'udisks2',
+      'lm-sensors']
+    state: latest
+
+- name: Install Azure Data Studio
+  apt:
+    deb: ../azure-data-studio/azuredatastudio-linux-1.20.1.deb
+
+- name: Install MySQL Workbench
+  apt:
+    deb: ../mysql-workbench/mysql-workbench-community_8.0.21-1ubuntu20.04_amd64.deb
+
+- name: Install Rambox
+  apt:
+    deb: ../rambox/Rambox-0.7.5-linux-amd64.deb
