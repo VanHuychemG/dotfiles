@@ -126,14 +126,14 @@
         'containerd.io']
     state: latest
 
-- name: Install mssql-tools package
-  apt:
-    name: [
-      'mssql-tools',
-      'msodbcsql17']
-    state: latest
-  environment:
-    ACCEPT_EULA: "y"
+# - name: Install mssql-tools package
+#   apt:
+#     name: [
+#       'mssql-tools',
+#       'msodbcsql17']
+#     state: latest
+#   environment:
+#     ACCEPT_EULA: "y"
 
 - name: Install Azure CLI
   apt:
