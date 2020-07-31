@@ -48,3 +48,7 @@
 - name: Install Rambox
   apt:
     deb: ../rambox/Rambox-0.7.5-linux-amd64.deb
+
+- name: Install Teams
+  apt:
+    deb: ../teams/teams_1.3.00.16851_amd64.deb
