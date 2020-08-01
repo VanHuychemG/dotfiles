@@ -100,6 +100,15 @@
     ~/.cert/nm-openvpn/us3033.nordvpn.com.udp-ca.pem: vpn/networkmanager/us3033.nordvpn.com.udp-ca.pem
     ~/.cert/nm-openvpn/us3033.nordvpn.com.udp-tls-auth.pem: vpn/networkmanager/us3033.nordvpn.com.udp-tls-auth.pem
 
+    ~/.gdfuse/default/config: google/personal/config
+    ~/.gdfuse/default/state: google/personal/state
+    ~/.gdfuse/cc/config: google/cc/config
+    ~/.gdfuse/cc/state: google/cc/state
+    ~/.gdfuse/cumpsd/config: google/cumpsd/config
+    ~/.gdfuse/cumpsd/state: google/cumpsd/state
+    ~/.gdfuse/exira/config: google/exira/config
+    ~/.gdfuse/exira/state: google/exira/state
+
     ~/repos: repos
 
     ~/elm: elm

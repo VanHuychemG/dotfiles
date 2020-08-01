@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+set -e
+
+fusermount -u ~/google/personal/
+fusermount -u ~/google/cc/
+fusermount -u ~/google/cumpsd/
+fusermount -u ~/google/exira/

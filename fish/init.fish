@@ -14,6 +14,9 @@ set -gx EDITOR nano
 #set PATH $PATH (gem env gempath | sed 's/:/\/bin\/:/g' | string split : --) 2> /dev/null
 #set PATH $PATH /home/linuxbrew/.linuxbrew/bin/
 
+# Add Google to PATH
+set PATH $PATH $HOME/.dotfiles/google
+
 # Add .NET Core to PATH
 set PATH $PATH /usr/share/dotnet
 

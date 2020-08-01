@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+set -e
+
+mkdir -p ~/google/personal/
+google-drive-ocamlfuse ~/google/personal/
+
+mkdir -p ~/google/cc/
+google-drive-ocamlfuse -label cc ~/google/cc/
+
+mkdir -p ~/google/cumpsd/
+google-drive-ocamlfuse -label cumpsd ~/google/cumpsd/
+
+mkdir -p ~/google/exira/
+google-drive-ocamlfuse -label exira ~/google/exira/
