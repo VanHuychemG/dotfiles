@@ -147,6 +147,14 @@
       'fzf']
     state: latest
 
+- name: Install Pip
+  apt:
+    name: [
+      'python3-dev',
+      'python3-pip',
+      'python3-setuptools']
+    state: latest
+
 - name: Determine shell executable location
   command: which fish
   register: fish
