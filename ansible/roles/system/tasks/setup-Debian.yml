@@ -68,6 +68,7 @@
     update_cache: yes
   with_items:
     - ppa:fish-shell/release-3
+    - ppa:alessandro-strada/ppa
     - 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/18.04/prod bionic main'
     - 'deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable'
     - 'deb [arch=amd64] https://packages.microsoft.com/repos/azure-cli/ focal main'
@@ -180,6 +181,11 @@
   unarchive:
     src: ../ytop/ytop-0.6.2-x86_64-unknown-linux-gnu.tar.gz
     dest: /usr/bin/
+
+- name: Install Google Drive FUSE
+  apt:
+    name: ['google-drive-ocamlfuse']
+    state: latest
 
 # - name: Install Ruby tools
 #   become: yes
