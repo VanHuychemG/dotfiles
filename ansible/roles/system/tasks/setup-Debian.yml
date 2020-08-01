@@ -155,6 +155,10 @@
       'python3-setuptools']
     state: latest
 
+- name: Install thefuck
+  command: pip3 install thefuck
+  become: yes
+
 - name: Determine shell executable location
   command: which fish
   register: fish

@@ -33,6 +33,9 @@ set PATH $GOPATH/bin /usr/local/go/bin $PATH
 # OMF Settings
 set -gx OMF_REPO_URI "https://github.com/CumpsD/dotfiles-oh-my-fish"
 
+# TheFuck Settings
+set -x THEFUCK_OVERRIDDEN_ALIASES 'top,git,cat'
+
 # Bobthefish theme settings
 set -g theme_title_display_process yes
 set -g theme_color_scheme solarized-dark
