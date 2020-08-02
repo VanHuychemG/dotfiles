@@ -17,6 +17,9 @@ set -gx EDITOR nano
 # Add Google to PATH
 set PATH $PATH $HOME/.dotfiles/google
 
+# Add Docker Compose to PATH
+set PATH $PATH $HOME/.dotfiles/docker
+
 # Add Terraform to PATH
 set PATH $PATH $HOME/.dotfiles/terraform
 
