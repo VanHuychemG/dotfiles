@@ -17,6 +17,9 @@ set -gx EDITOR nano
 # Add Google to PATH
 set PATH $PATH $HOME/.dotfiles/google
 
+# Add Terraform to PATH
+set PATH $PATH $HOME/.dotfiles/terraform
+
 # Add .NET Core to PATH
 set PATH $PATH /usr/share/dotnet
 
