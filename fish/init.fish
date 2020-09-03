@@ -73,7 +73,7 @@ set -gx NPM_CONFIG_PREFIX ~/.npm-global
 set PATH $HOME/.npm-global/bin $PATH
 
 # Configure Docker to use Docker for Windows
-set -gx DOCKER_HOST tcp://0.0.0.0:2375
+# set -gx DOCKER_HOST tcp://0.0.0.0:2375
 
 # Configure new keybindings for fzf
 set -gx FZF_LEGACY_KEYBINDINGS 0
