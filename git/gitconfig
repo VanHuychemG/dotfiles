@@ -1,17 +1,13 @@
 [push]
     default = simple
-	
-[vlaamseoverheid]
-    email = david.cumps@vlaanderen.be
-    name = David Cumps
 
 [gogs]
-    email = david@exira.com
-    name = David Cumps
+    email = geert@exira.com
+    name = Geert Van Huychem
 
 [github]
-    email = david@cumps.be
-    name = David Cumps
+    email = geert@iframeworx.be
+    name = GeertVan Huychem
 
 [gpg]
     program = /usr/bin/gpg
@@ -22,7 +18,7 @@
 
 [user]
     useConfigOnly = true
-    signingKey = 9D771C7A03413FB3
+    signingKey = 81E1C9781536CF54
 
 [commit]
     gpgSign = true

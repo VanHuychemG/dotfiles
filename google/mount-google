@@ -5,11 +5,5 @@ set -e
 mkdir -p ~/google/personal/
 mount | grep "${HOME}/google/personal" >/dev/null || google-drive-ocamlfuse ~/google/personal/
 
-mkdir -p ~/google/cc/
-mount | grep "${HOME}/google/cc" >/dev/null || google-drive-ocamlfuse -label cc ~/google/cc/
-
-mkdir -p ~/google/cumpsd/
-mount | grep "${HOME}/google/cumpsd" >/dev/null || google-drive-ocamlfuse -label cumpsd ~/google/cumpsd/
-
 mkdir -p ~/google/exira/
 mount | grep "${HOME}/google/exira" >/dev/null || google-drive-ocamlfuse -label exira ~/google/exira/
