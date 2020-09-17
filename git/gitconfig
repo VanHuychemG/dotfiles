@@ -7,7 +7,11 @@
 
 [github]
     email = geert@iframeworx.be
-    name = GeertVan Huychem
+    name = Geert Van Huychem
+
+[code]
+    email = geert@iframeworx.be
+    name = Geert Van Huychem
 
 [gpg]
     program = /usr/bin/gpg
