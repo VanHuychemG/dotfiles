@@ -8,7 +8,7 @@ shopt -s nocasematch
 remote_url="$( git config --get --local remote.origin.url )"
 services=(
     'gogs'
-    'github',
+    'github'
     'code'
 )
 
@@ -17,6 +17,8 @@ set_local_user_config() {
     local config="${2}"
     local service_config="$( git config --get ${service}.${config} )"
     local local_config="$( git config --get --local user.${config} )"
+
+    # echo "${1} - ${2}"
 
     if [[ "${local_config}" != "${service_config}" ]]; then
         git config --local "user.${config}" "${service_config}"
@@ -29,6 +31,8 @@ set_local_user_config() {
 # user.useConfigOnly = true setting in .gitconfig will prompt for those
 # credentials and prevent commits until they are defined
 for s in "${services[@]}"; do
+    # echo "${remote_url} - ${s}"
+
     if [[ "${remote_url}" =~ "${s}" ]]; then
         set_local_user_config "${s}" 'name'
         set_local_user_config "${s}" 'email'
